@@ -5,11 +5,11 @@ import { Button } from "./ui/button";
 const AboutSection = () => {
   return (
     <section className="container my-10 flex justify-center flex-col items-center">
-      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-yellow-400 max-w-3xl w-full">
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-yellow-400 max-w-4xl w-full">
         About Us
       </h2>
 
-      <div className="flex flex-col gap-10 justify-center items-center h-full max-w-3xl my-5 lg:flex-row-reverse">
+      <div className="flex flex-col gap-10 justify-center items-center h-full max-w-4xl my-5 lg:flex-row-reverse">
         <div className="relative aspect-square h-80 rounded-full border-2 border-yellow-400 p-6">
           <Image
             src="/school/6.jpg"
