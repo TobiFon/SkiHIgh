@@ -51,7 +51,7 @@ const Facilitites = () => {
         Facilities
       </h2>
 
-      <div className=" bg-blue-500 text-slate-100 max-w-4xl py-10 px-5 space-y-10">
+      <div className=" bg-blue-500 text-slate-100 max-w-4xl py-10 px-5 space-y-10 w-screen">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           We take pride in providing a nurturing environment that supports the
           holistic development of our students. Our state-of-the-art facilities
