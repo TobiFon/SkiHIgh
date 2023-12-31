@@ -13,10 +13,10 @@ const Footer = () => {
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
             CONTACT US
           </h4>
-          <div>
-            <div className="flex  gap-2 my-3">
+          <div className=" max-w-xs ">
+            <div className="flex  gap-2 my-3 ">
               <MapPin className="text-yellow-500" size={25} />
-              <div>
+              <div className="">
                 <p className="leading-7 [&:not(:first-child)]:mt-6 flex gap-1 items-center">
                   ski-high primary school, Yaounde, biamasi main road
                 </p>

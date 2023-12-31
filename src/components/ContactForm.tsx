@@ -5,10 +5,10 @@ import { FieldErrors, useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
-import { useState } from "react";
 
 import {
   Select,
@@ -25,7 +24,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Link from "next/link";
 
 const formSchema = z.object({
   Name: z.string().min(2, {
@@ -49,7 +47,6 @@ const formSchema = z.object({
 type Form = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const [open, setOpen] = useState(false);
   const form = useForm<Form>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -74,7 +71,7 @@ export function ContactForm() {
       if (response.ok) {
         // Handle success
         form.reset();
-        setOpen(true);
+        handleToast();
       } else {
         // Handle error
         console.error("Form submission failed");
@@ -86,7 +83,13 @@ export function ContactForm() {
   const onerror = (errors: FieldErrors<Form>) => {
     console.log(errors);
   };
-
+  const { toast } = useToast();
+  const handleToast = () => {
+    toast({
+      title: "Uh oh! Something went wrong.",
+      description: "There was a problem with your request.",
+    });
+  };
   return (
     <div className="w-screen flex flex-col justify-center items-center bg-blue-100 p-10 max-w-4xl">
       <Form {...form}>
@@ -189,6 +192,12 @@ export function ContactForm() {
 
           <Button
             type="submit"
+            onClick={() =>
+              toast({
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem with your request.",
+              })
+            }
             size={"lg"}
             className=" w-full bg-blue-500 hover:bg-blue-400"
             disabled={
