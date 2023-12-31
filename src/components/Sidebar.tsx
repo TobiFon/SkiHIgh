@@ -14,9 +14,9 @@ interface ComponentsProps {
 
 const Sidebar = ({ links, setIsOpen }: ComponentsProps) => {
   return (
-    <div className="absolute top-0 right-0 bottom-0 w-2/3 h-screen bg-yellow-400 flex items-center justify-center">
+    <div className="fixed top-0 right-0 bottom-0 w-2/3 h-screen bg-yellow-400 flex items-center justify-center">
       <Button
-        className=" fixed top-2 right-4 bg-yellow-400 hover:bg-yellow-300"
+        className=" absolute top-2 right-4 bg-yellow-400 hover:bg-yellow-300"
         onClick={() => setIsOpen(false)}
       >
         <X size={30} />
@@ -34,7 +34,7 @@ const Sidebar = ({ links, setIsOpen }: ComponentsProps) => {
       </div>
       <Button
         size={"lg"}
-        className=" bg-slate-100 text-yellow-500 fixed bottom-3 flex items-center text-xl"
+        className=" bg-slate-100 text-yellow-500 absolute bottom-3 flex items-center text-xl"
       >
         Contact Us
       </Button>
