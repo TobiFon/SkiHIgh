@@ -24,11 +24,11 @@ const Gallery = () => {
         Gallery
       </h2>
 
-      <div className=" grid md:grid-cols-2 xl:grid-cols-3 max-w-4xl gap-4 mt-8">
+      <div className=" grid md:grid-cols-2 xl:grid-cols-3 max-w-4xl gap-4 mt-8 px-5">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative h-64 w-64 object-cover object-center"
+            className="relative w-96 h-64 lg:w-72 object-cover object-center"
           >
             <Image src={image} fill alt="img" />
           </div>

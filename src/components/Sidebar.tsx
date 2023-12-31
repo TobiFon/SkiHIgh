@@ -27,6 +27,9 @@ const Sidebar = ({ links, setIsOpen }: ComponentsProps) => {
             key={index}
             href={link.url}
             className=" text-2xl hover:text-yellow-400"
+            onClick={() => {
+              setIsOpen(false);
+            }}
           >
             {link.name}
           </Link>
