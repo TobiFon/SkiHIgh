@@ -29,10 +29,16 @@ const Navbar = () => {
           ))}
         </ul>
         <Button
-          className="bg-blue-600 hover:bg-blue-500"
+          className=" hidden lg:inline bg-yellow-500 text-xl text-slate-100 hover:bg-yellow-400"
+          size={"lg"}
+        >
+          Contact Us
+        </Button>
+        <Button
+          className="bg-blue-600 hover:bg-blue-500 lg:hidden"
           onClick={() => setIsOpen(true)}
         >
-          <AlignCenter className="lg:hidden" size={30} />
+          <AlignCenter size={30} />
         </Button>
         {isOpen && <Sidebar links={links} setIsOpen={setIsOpen} />}
       </div>
