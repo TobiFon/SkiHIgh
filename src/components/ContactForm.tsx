@@ -86,8 +86,8 @@ export function ContactForm() {
   const { toast } = useToast();
   const handleToast = () => {
     toast({
-      title: "Uh oh! Something went wrong.",
-      description: "There was a problem with your request.",
+      title: "Message sent successfully",
+      description: "We'll get back to you ASAP!",
     });
   };
   return (
@@ -192,12 +192,6 @@ export function ContactForm() {
 
           <Button
             type="submit"
-            onClick={() =>
-              toast({
-                title: "Uh oh! Something went wrong.",
-                description: "There was a problem with your request.",
-              })
-            }
             size={"lg"}
             className=" w-full bg-blue-500 hover:bg-blue-400"
             disabled={
