@@ -24,6 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Toaster } from "./ui/toaster";
 
 const formSchema = z.object({
   Name: z.string().min(2, {

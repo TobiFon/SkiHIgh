@@ -14,7 +14,7 @@ interface ComponentsProps {
 
 const Sidebar = ({ links, setIsOpen }: ComponentsProps) => {
   return (
-    <div className="fixed top-0 right-0 bottom-0 w-2/3 h-screen bg-yellow-400 flex items-center justify-center">
+    <div className="fixed top-0 right-0 bottom-0 w-2/3 h-full bg-yellow-400 flex items-center justify-center">
       <Button
         className=" absolute top-2 right-4 bg-yellow-400 hover:bg-yellow-300"
         onClick={() => setIsOpen(false)}
